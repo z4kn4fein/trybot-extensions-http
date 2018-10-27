@@ -23,11 +23,11 @@ From ASP.NET Core 2.1 you can configure your `HttpClient` instances via an `IHtt
 
 2. Then you can take the configured `HttpClient` by dependency injection in your controller:
     ```c#
-    public class TestController : Controller
+    public class CustomController : Controller
     {
         private readonly HttpClient client;
 
-        public TestController(HttpClient client)
+        public CustomController(HttpClient client)
         {
             this.client = client;
         }
