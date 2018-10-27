@@ -1,0 +1,19 @@
+language: csharp
+dotnet: 2.1.300
+mono: none
+
+os:
+  - linux
+  - osx
+
+dist: trusty
+osx_image: xcode8.3
+  
+before_install:  
+  - if test "$TRAVIS_OS_NAME" == "osx"; then ulimit -n 2048; fi
+  
+before_script:
+  - dotnet restore
+
+script:
+  - dotnet test test/trybot.extensions.http.tests.csproj -c Release
