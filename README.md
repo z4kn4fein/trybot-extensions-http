@@ -1,6 +1,6 @@
 # trybot-extensions-http [![Appveyor build status](https://img.shields.io/appveyor/ci/pcsajtai/trybot-extensions-http/master.svg?label=appveyor)](https://ci.appveyor.com/project/pcsajtai/trybot-extensions-http/branch/master) [![Travis CI build status](https://img.shields.io/travis/z4kn4fein/trybot-extensions-http/master.svg?label=travis-ci)](https://travis-ci.org/z4kn4fein/trybot-extensions-http) [![NuGet Version](https://buildstats.info/nuget/Trybot.Extensions.Http)](https://www.nuget.org/packages/Trybot.Extensions.Http/)
 
-This package is an ASP.NET Core integration for [Trybot](https://github.com/z4kn4fein/trybot) and contains extensions for the [IHttpClientBuilder](https://github.com/aspnet/HttpClientFactory/tree/master/src/Microsoft.Extensions.Http/DependencyInjection) interface to make HttpClient calls more resilient and fault tolerant.
+This package is an ASP.NET Core integration for [Trybot](https://github.com/z4kn4fein/trybot) and contains extensions for the [IHttpClientBuilder](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Extensions.Http/src) interface to make HttpClient calls more resilient and fault tolerant.
 
 ## Usage
 From ASP.NET Core 2.1 you can configure your `HttpClient` instances via an `IHttpClientBuilder` offered by the `AddHttpClient()` function on the `IServiceCollection`. This package extends this builder interface for configuring transient fault handling around the calls initiated by those HttpClients. 
@@ -41,5 +41,5 @@ From ASP.NET Core 2.1 you can configure your `HttpClient` instances via an `IHtt
 
 ## Documentation
 - [Trybot documentaion](https://github.com/z4kn4fein/trybot/blob/master/README.md)
-- [IHttpClientFactory documentaion](https://docs.microsoft.com/en-gb/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- [IHttpClientFactory documentaion](https://docs.microsoft.com/en-gb/aspnet/core/fundamentals/http-requests)
 - [Resiliency patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/resiliency)
